@@ -1,0 +1,104 @@
+>> Seção 1: Introdução
+	Matheus Battisti (Youtube)
+		Repositorio do Curso:
+			https://github.com/matheusbattisti/curso_react
+		O repositório do projeto do TMDB (API de filmes) é este: 
+			https://github.com/matheusbattisti/movies_lib/tree/main	
+
+	é uma Biblioteca JavaScript
+	Arquitetura baseada em componentes
+
+	criando um projeto:
+		npx create-react-app <nome>
+
+		criando com o Vite:
+			npm create vite@latest
+
+
+	rodar um projeto:
+		npm start
+		usando o Vite:
+			npm run dev
+
+	Estrutura base:
+		node_modules
+		public: html de inicializacao
+		src: onde programamos os apps
+		src/index.js: arquivo de inicializacao do React
+		src/App.js: Componente principal da aplicacao
+
+	Extensão para react:
+		ES7+ React/Redux/React-Native
+			rafce (criar componente)
+
+>> Seção 2
+	
+	Criando um novo componente
+		const Nome = () => {
+			return (
+				<div></div>
+			);
+		}
+		export default Nome;
+	
+	
+	Importação de componentes
+		import X from './components/X'	
+
+	JSX
+		tudo que fica dentro do return de um componente é um JSX 
+
+	Comentários
+		// algum Comentário ou /* */ no JS 
+		{/* */} no JSX
+
+		Ver dados no console do navegador (para debug por exemplo)
+		console.log("")	
+
+>> Seção 3: Avançando no React	
+	Imagens
+		Se a imagem estiver na pasta public
+			<img src="/img1.jpg" alt="Paisagem" />
+		Se estiver na pasta assets
+			import City from './assets/city.jpg'
+			<img src={City} alt="Cidade" />
+
+	Hooks
+		recursos do React
+		começam com use, ex: useState
+		precisam ser importados
+
+		import { useState } from "react";
+		const [number,setNumber] = useState(5);
+
+	Lista 
+		const [list] = useState(["Matheus","Pedro","Adriano"])
+		<ul>
+            {list.map((item,i)=> (
+                <li key={i}>{item}</li>
+            ))}
+        </ul>	
+
+	Condicional
+		- exemplos em ConditionalRender	
+
+	Props
+		Permite passar valores de componente pai para um componente filho
+		vem em um objeto no argumento da funcao do componente
+		- exemplos em ShowUserName, CarDetails
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
