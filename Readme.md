@@ -99,38 +99,37 @@
 
 ## #5 Formulários com React
 
-- [ ] Introdução da seção
-- [ ] Criando formulários
-- [ ] Label envolvendo input
-- [ ] Gerenciamento de dados de input
-- [ ] Alteração de state inline
-- [ ] Envio de form
-- [ ] Controlled inputs
-- [ ] Resetando formulários
-- [ ] Textarea no React
-- [ ] Select no React
-- [ ] Conclusão da seção
+- [x] Introdução da seção
+- [x] Criando formulários
+- [x] Label envolvendo input
+- [x] Gerenciamento de dados de input
+- [x] Alteração de state inline
+- [x] Envio de form
+- [x] Controlled inputs
+- [x] Resetando formulários
+- [x] Textarea no React
+- [x] Select no React
+- [x] Conclusão da seção
 
   <br/>    
 
 ## #6 Projeto: Secret Word
-- [ ] Apresentação do projeto
-- [ ] Criando o projeto
-- [ ] Ajustes gerais
-- [ ] Finalizando tela inicial
-- [ ] Criando componentes do projeto
-- [ ] Alternando os estágios do jogo
-- [ ] Escolhendo palavra e categoria de forma aleatória
-- [ ] Estruturando componente do jogo
-- [ ] CSS da tela do jogo
-- [ ] Consumindo states do jogo
-- [ ] Evento de inserção de letra
-- [ ] Processando letras válidas e inválidas
-- [ ] Lógica para fim de jogo
-- [ ] Finalizando tela de fim de jogo
-- [ ] Condição de vitória
-- [ ] Conclusão do projeto
-
+- [x] Apresentação do projeto
+- [x] Criando o projeto
+- [x] Ajustes gerais
+- [x] Finalizando tela inicial
+- [x] Criando componentes do projeto
+- [x] Alternando os estágios do jogo
+- [x] Escolhendo palavra e categoria de forma aleatória
+- [x] Estruturando componente do jogo
+- [x] CSS da tela do jogo
+- [x] Consumindo states do jogo
+- [x] Evento de inserção de letra
+- [x] Processando letras válidas e inválidas
+- [x] Lógica para fim de jogo
+- [x] Finalizando tela de fim de jogo
+- [x] Condição de vitória
+- [x] Conclusão do projeto
   <br/>    
 
 
