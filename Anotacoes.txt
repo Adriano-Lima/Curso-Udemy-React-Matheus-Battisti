@@ -87,6 +87,49 @@
 		vem em um objeto no argumento da funcao do componente
 		- exemplos em ShowUserName, CarDetails
 
+	Fragments
+		<></>
+
+	Children prop (abracar conteudo)
+		utilizado para quando um componente precisa ter Jsx dentro de um componente
+		porem este JSX vem do componente pai 
+
+	Função props 
+		as funções do pai podem ser passados via props para o componente filho 
+
+	Elevação de state (State lift)
+		quando um valor é elevado do componente filho para o pai 
+
+>> Seção 4
+	CSS global 
+		utilizado para estilizar varios elementos
+		utilizamos no arquivo index.css na pasta src 
+	
+	CSS de componente 
+		cria-se um arquivo de css com o mesmo nome do componente 
+		importado no componente
+		tomar cuidado pois vaza para toda aplicação
+
+	Inline style
+		<p style={ {color:"bule",padding:"25px",borderTop:"2px solid red" } }>Este elemento foi estilzado de forma inline</p>
+
+	Inline style Dinamico
+		<h2 style={ n<10? ({color:"purple"}): ({color:"green"}) }>CSS Dinâmico</h2>
+
+	Classe Dinamica
+		<h2 className={redTitle ? "red-title":"title" }>Esse titulo vai ter uma classe dinamica</h2>
+
+	CSS Modulos
+		nao vaza 
+		Componente.module.css 
+		precisamos importar no compomente
+
+>> Seção 5: Formulários com React
+			 
+						
+
+
+
 
 
 
