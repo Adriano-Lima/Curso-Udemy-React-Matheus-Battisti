@@ -1,3 +1,8 @@
+Meu repositório: https://github.com/Adriano-Lima/Curso-Udemy-React-Matheus-Battisti
+
+Curso JavaScript
+	https://youtu.be/OYPbr6ZG3pc
+
 >> Seção 1: Introdução
 	Matheus Battisti (Youtube)
 		Repositorio do Curso:
@@ -125,6 +130,38 @@
 		precisamos importar no compomente
 
 >> Seção 5: Formulários com React
+
+>> Seção 6: Projeto Word Secret
+
+>> Seção 7: Requisições HTTP com React
+	Json Server
+		simula uma API
+		npm i json-server (na pasta do projeto)
+		Add em package.json (scripts)
+			"server":"json-server --watch data/db.json"
+	useEffect
+		faz com que uma determinada açao seja executada apenas vez
+		isso é interessante pois os componentes estão sempre se renderizando
+		presente sempre nas requisições assincronas 
+
+	Custom hook para o fetch
+		dividir uma função para que ela possa ser reaproveitada
+		hooks ficam na pasta hooks
+		padrao useName 
+		criamos uma função e exportamos ela 
+
+	Estado de loading no Post
+		remover ação de adicionar outro item enquanto o request ainda nao finalizou
+	
+	React Router	
+		criar estruturas de rotas 
+		precisa instalar (BrowserRouter, Routes, Route) e configurar no projeto 
+			npm i react-router-dom
+
+
+
+
+
 			 
 						
 

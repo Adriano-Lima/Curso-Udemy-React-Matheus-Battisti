@@ -1,0 +1,99 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "name": "Batata",
+      "price": "15",
+      "id": 4
+    },
+    {
+      "name": "Carne",
+      "price": "50",
+      "id": 5
+    },
+    {
+      "name": "teste",
+      "price": "15",
+      "id": 6
+    },
+    {
+      "name": "teste 2",
+      "price": "20",
+      "id": 7
+    },
+    {
+      "name": "teste 3",
+      "price": "55",
+      "id": 8
+    },
+    {
+      "name": "mesa",
+      "price": "1500",
+      "id": 9
+    },
+    {
+      "name": "cadeira",
+      "price": "200",
+      "id": 10
+    },
+    {
+      "name": "cadeira",
+      "price": "200",
+      "id": 11
+    },
+    {
+      "name": "mouse",
+      "price": "50",
+      "id": 12
+    },
+    {
+      "name": "mouse",
+      "price": "50",
+      "id": 13
+    },
+    {
+      "name": "mouse",
+      "price": "50",
+      "id": 14
+    },
+    {
+      "name": "suporte",
+      "price": "150",
+      "id": 15
+    },
+    {
+      "name": "suporte",
+      "price": "150",
+      "id": 16
+    },
+    {
+      "name": "suporte",
+      "price": "150",
+      "id": 17
+    },
+    {
+      "name": "monitor",
+      "price": "400",
+      "id": 18
+    },
+    {
+      "name": "cadeira gamer",
+      "price": "1200",
+      "id": 19
+    }
+  ]
+}

@@ -8,7 +8,7 @@
 
 <h3> Andamento do Processo:</h3>
 
-<img height="150vh" src="Imagens/logo_react.jpg">
+<img height="150vh" src="imagens/logo_react.jpg">
 
 </div>
 
@@ -134,19 +134,19 @@
 
 
 ## #7 Requisições HTTP com React
-- [ ] Introdução da seção
-- [ ] Criando projeto com JSON server
-- [ ] A importância do useEffect
-- [ ] Resgatando dados da API
-- [ ] Adicionando dados com React
-- [ ] Carregamento de dados dinâmico
-- [ ] Custom hook para resgate de dados
-- [ ] Refatorando o POST
-- [ ] Estado de Loading
-- [ ] Loading no POST
-- [ ] Tratando erros
-- [ ] Desafio sobre requisições HTTP
-- [ ] Conclusão da seção
+- [x] Introdução da seção
+- [x] Criando projeto com JSON server
+- [x] A importância do useEffect
+- [x] Resgatando dados da API
+- [x] Adicionando dados com React
+- [x] Carregamento de dados dinâmico
+- [x] Custom hook para resgate de dados
+- [x] Refatorando o POST
+- [x] Estado de Loading
+- [x] Loading no POST
+- [x] Tratando erros
+- [x] Desafio sobre requisições HTTP
+- [x] Conclusão da seção
  
   <br/>    
 
