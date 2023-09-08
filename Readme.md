@@ -152,34 +152,34 @@
 
 
 ## #8 React Router
-- [ ] Introdução da seção
-- [ ] O que é React Router?
-- [ ] Desafio sobre projetos em React com dependências
-- [ ] Configurando o React Router
-- [ ] Navegação entre páginas
-- [ ] Carregando dados
-- [ ] Rotas dinâmicas
-- [ ] Carregamento dinâmico de dados
-- [ ] Nested routes
-- [ ] Página 404
-- [ ] Link ativo
-- [ ] Search Params
-- [ ] Redirecionamento de URL
-- [ ] Conclusão da seção
+- [x] Introdução da seção
+- [x] O que é React Router?
+- [x] Desafio sobre projetos em React com dependências
+- [x] Configurando o React Router
+- [x] Navegação entre páginas
+- [x] Carregando dados
+- [x] Rotas dinâmicas
+- [x] Carregamento dinâmico de dados
+- [x] Nested routes
+- [x] Página 404
+- [x] Link ativo
+- [x] Search Params
+- [x] Redirecionamento de URL
+- [x] Conclusão da seção
 
   <br/>    
 
 ## #9 Context API do React
-- [ ] Introdução da seção
-- [ ] O que é Context API?
-- [ ] Criação de projeto e inicialização de dependências
-- [ ] Criando contexto
-- [ ] Criando Provider
-- [ ] Alterand o contexto
-- [ ] Refatorando contexto para hook
-- [ ] Criando um contexto mais complexo
-- [ ] Alterando contexto mais complexo
-- [ ] Conclusão da seção
+- [x] Introdução da seção
+- [x] O que é Context API?
+- [x] Criação de projeto e inicialização de dependências
+- [x] Criando contexto
+- [x] Criando Provider
+- [x] Alterand o contexto
+- [x] Refatorando contexto para hook
+- [x] Criando um contexto mais complexo
+- [x] Alterando contexto mais complexo
+- [x] Conclusão da seção
 
   <br/>    
 

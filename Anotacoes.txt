@@ -137,8 +137,20 @@ Curso JavaScript
 	Json Server
 		simula uma API
 		npm i json-server (na pasta do projeto)
+		add um pasta data na raiz do projeto e adicionar um arquivo chamado db.json 
+			{
+				"products": [
+					{
+					"id": 1,
+					"name": "Camisa",
+					"price": 59.9
+					}
+				]
+			}
 		Add em package.json (scripts)
 			"server":"json-server --watch data/db.json"
+		para executar:
+			npm run server 	
 	useEffect
 		faz com que uma determinada açao seja executada apenas vez
 		isso é interessante pois os componentes estão sempre se renderizando
@@ -158,7 +170,32 @@ Curso JavaScript
 		precisa instalar (BrowserRouter, Routes, Route) e configurar no projeto 
 			npm i react-router-dom
 
+>> Seção 8: React Router 
+	precisa instalar
+		npm i react-router-dom
+		import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+		<BrowserRouter>
+        	<Navbar />
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='/about' element={<About />} />
+					{/* no match route 404 */}
+					<Route path="*" element={<NotFound />} />
+				</Routes>
+      	</BrowserRouter>
 
+	Link Ativo 
+		import {Link, NavLink } from 'react-router-dom'
+		trocar Link por NavLink 	
+		<Link to="/">Home</Link>	
+			<NavLink to="/">Home</NavLink>			
+
+>> Seção 9: Context API do React
+	facilita o compartilhamento de um estado entre componentes
+	dados globais 
+	o context precisa encapsular os componentes que receberao seus valores
+	geralmente colocamos no App.js ou index.js
+	ficam na pasta context 	
 
 
 
