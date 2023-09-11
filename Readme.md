@@ -184,24 +184,24 @@
   <br/>    
 
 ## #10 Projeto: MiniBlog (React Router, Hooks, Context, Firebase, Autenticação)
-- [ ] Apresentação do projeto
-- [ ] Setup do Firebase
-- [ ] Criando o projeto
-- [ ] Integrando Firebase ao React
-- [ ] Configurando o React Router
-- [ ] Adicionando componente de navbar
-- [ ] CSS navbar e footer
-- [ ] Estilos gerais do projeto
-- [ ] Criando formulário de cadastro
-- [ ] CSS do formulário
-- [ ] States do form de cadastro
-- [ ] Criando hook de autenticação
-- [ ] Registrando usuário no sistema
-- [ ] Contexto da autenticação
-- [ ] Passando usuário para o contexto
-- [ ] Links para usuário autenticado
-- [ ] Bloqueando páginas que precisam de autenticação
-- [ ] Função de logout
+- [x] Apresentação do projeto
+- [x] Setup do Firebase
+- [x] Criando o projeto
+- [x] Integrando Firebase ao React
+- [x] Configurando o React Router
+- [x] Adicionando componente de navbar
+- [x] CSS navbar e footer
+- [x] Estilos gerais do projeto
+- [x] Criando formulário de cadastro
+- [x] CSS do formulário
+- [x] States do form de cadastro
+- [x] Criando hook de autenticação
+- [x] Registrando usuário no sistema
+- [x] Contexto da autenticação
+- [x] Passando usuário para o contexto
+- [x] Links para usuário autenticado
+- [x] Bloqueando páginas que precisam de autenticação
+- [x] Função de logout
 - [ ] Estruturando página de login
 - [ ] Login de usuário
 - [ ] Estrutura da página de criar post
