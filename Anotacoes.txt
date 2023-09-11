@@ -188,7 +188,10 @@ Curso JavaScript
 		import {Link, NavLink } from 'react-router-dom'
 		trocar Link por NavLink 	
 		<Link to="/">Home</Link>	
-			<NavLink to="/">Home</NavLink>			
+			<NavLink to="/">Home</NavLink>	
+	Mudar de rota no js 
+		import { useNavigate } from "react-router-dom"	
+		navigate("/home")			
 
 >> Seção 9: Context API do React
 	facilita o compartilhamento de um estado entre componentes
@@ -198,6 +201,9 @@ Curso JavaScript
 	ficam na pasta context 	
 
 
+>> Seção 10: Mini blog
+	trabalhando/integrando projeto com Firebase Auth
+	
 
 			 
 						
