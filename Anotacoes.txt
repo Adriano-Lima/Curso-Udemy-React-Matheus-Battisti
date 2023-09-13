@@ -17,6 +17,8 @@ Curso JavaScript
 		npx create-react-app <nome>
 
 		criando com o Vite:
+			instala menos coisas que o padrao (projeto mais limpo)
+			build mais rapido 
 			npm create vite@latest
 
 
@@ -39,16 +41,19 @@ Curso JavaScript
 >> Seção 2
 	
 	Criando um novo componente
-		const Nome = () => {
+		const NomeComoponente = () => {
 			return (
 				<div></div>
 			);
 		}
-		export default Nome;
+		export default NomeComoponente;
 	
 	
 	Importação de componentes
 		import X from './components/X'	
+			se eu importar dessa forma eu importo o default
+			mas se quiser impotar outra funcao por exemplo do arquivo
+				import {NovoMenu} from './DivMenu'
 
 	JSX
 		tudo que fica dentro do return de um componente é um JSX 
@@ -59,6 +64,7 @@ Curso JavaScript
 
 		Ver dados no console do navegador (para debug por exemplo)
 		console.log("")	
+		alert(`nome:${nome}`)
 
 >> Seção 3: Avançando no React	
 	Imagens
@@ -75,6 +81,26 @@ Curso JavaScript
 
 		import { useState } from "react";
 		const [number,setNumber] = useState(5);
+			useState sempre retorna uma array 
+			quando uma variavel esta sendo controlada pelo useState muda seu valor, ele faz uma rendirizacao do componente que esta utilizando esta variavel 
+
+		criando um hook (Hook personalizado)
+			- é uma funcao criada em um arquivo reparado e que ira gerencia algum(s) estado(s)
+				ex: crio um arquivo na pasta hooks chamado useRequest.js
+				export const useRequest = () => {
+					const [loading,setLoading] = useState(false)
+
+					const getRequest = async (url) => {
+						setLoadind(true)
+						....
+					}
+					...
+					return {loading,getRequest}
+				}
+			
+			- onde vai usar o hook:
+				const {loading,getRequest} = useRequest ()
+					
 
 	Lista 
 		const [list] = useState(["Matheus","Pedro","Adriano"])
@@ -91,6 +117,20 @@ Curso JavaScript
 		Permite passar valores de componente pai para um componente filho
 		vem em um objeto no argumento da funcao do componente
 		- exemplos em ShowUserName, CarDetails
+
+		no componente pai 
+			<DivMenu titulo="teste">Carro Novo</DivMenu>
+		
+		no componente filho
+			const DivMenu = ({titulo, children}) => {
+				return {
+					<div>
+						<h1>{titulo}</h1>
+						<h2>{children}</h2>
+					</div>
+				}
+			}
+
 
 	Fragments
 		<></>
@@ -194,11 +234,14 @@ Curso JavaScript
 		navigate("/home")			
 
 >> Seção 9: Context API do React
-	facilita o compartilhamento de um estado entre componentes
+	facilita o compartilhamento de um estado (variaves) entre componentes
 	dados globais 
-	o context precisa encapsular os componentes que receberao seus valores
+	o context precisa abracar os componentes que receberao seus valores
 	geralmente colocamos no App.js ou index.js
 	ficam na pasta context 	
+	
+
+
 
 
 >> Seção 10: Mini blog
