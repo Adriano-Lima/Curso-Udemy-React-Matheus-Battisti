@@ -6,7 +6,7 @@ export const useFetch = (url) => {
     //refatorando post 
     const [config, setConfig] = useState(null)
     const [method, setMethod] = useState(null)
-    const [callFetch, setCallFetch] = useState(false)
+    const [callFetch, setCallFetch] = useState(false) ///utilizado para indicar que acrescentamos novos dados, e assim disparar fetchData 
 
     //loading
     const [loading, setLoading] = useState(false)
@@ -26,6 +26,7 @@ export const useFetch = (url) => {
             setMethod(method)
         }
     }
+
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true)
@@ -43,6 +44,7 @@ export const useFetch = (url) => {
         }
         fetchData()
     }, [url, callFetch])
+   
     //refatorando post 
     useEffect(() => {
         if (method === "POST") {

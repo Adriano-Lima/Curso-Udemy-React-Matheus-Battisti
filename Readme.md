@@ -202,29 +202,29 @@
 - [x] Links para usuário autenticado
 - [x] Bloqueando páginas que precisam de autenticação
 - [x] Função de logout
-- [ ] Estruturando página de login
-- [ ] Login de usuário
-- [ ] Estrutura da página de criar post
-- [ ] Função de criar post
-- [ ] Inserindo dados no Firebase
-- [ ] Validação dos dados
-- [ ] Estruturando a home
-- [ ] Hook de resgate de dados
-- [ ] Exibindo posts na home
-- [ ] CSS dos detalhes do post
-- [ ] Criando funcionalidade de busca
-- [ ] Exibindo resultados da busca
-- [ ] Criando página de post individual
-- [ ] Exibindo dado de post individual
-- [ ] CSS da página de post individual
-- [ ] Estruturando dashboard
-- [ ] Exibindo posts do usuário na dashboard
-- [ ] Concluindo estrutura da dashboard
-- [ ] CSS da dashboard
-- [ ] Excluindo post
-- [ ] Criando página de edição
-- [ ] Atualizando post
-- [ ] Conclusão do projeto
+- [x] Estruturando página de login
+- [x] Login de usuário
+- [x] Estrutura da página de criar post
+- [x] Função de criar post
+- [x] Inserindo dados no Firebase
+- [x] Validação dos dados
+- [x] Estruturando a home
+- [x] Hook de resgate de dados
+- [x] Exibindo posts na home
+- [x] CSS dos detalhes do post
+- [x] Criando funcionalidade de busca
+- [x] Exibindo resultados da busca
+- [x] Criando página de post individual
+- [x] Exibindo dado de post individual
+- [x] CSS da página de post individual
+- [x] Estruturando dashboard
+- [x] Exibindo posts do usuário na dashboard
+- [x] Concluindo estrutura da dashboard
+- [x] CSS da dashboard
+- [x] Excluindo post
+- [x] Criando página de edição
+- [x] Atualizando post
+- [x] Conclusão do projeto
 
   <br/>     
 

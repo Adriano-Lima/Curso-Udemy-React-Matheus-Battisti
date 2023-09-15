@@ -14,6 +14,8 @@ const Register = () => {
 
     const { createUser, error: authError, loading } = useAuthentication()
 
+    const navigate = useNavigate();
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         setError("")
@@ -28,8 +30,8 @@ const Register = () => {
         }
         const resp = await createUser(user)
         
-        navigate("/home")
-        
+        navigate('/')
+
         console.log(resp)
     }
 

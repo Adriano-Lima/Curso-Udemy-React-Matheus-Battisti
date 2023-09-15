@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import './App.css'
 
 import CapsLock from './components/CapsLock'
+import StudyJavaScript from './components/StudyJavaScript'
 
 function App() {
 
@@ -9,6 +9,8 @@ function App() {
   return (
     <div>
       <CapsLock>Me deixe em capslock por favor </CapsLock>
+      <StudyJavaScript></StudyJavaScript>
+
     </div>
   )
 }

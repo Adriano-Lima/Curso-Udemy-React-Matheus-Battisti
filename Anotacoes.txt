@@ -85,7 +85,7 @@ Curso JavaScript
 			quando uma variavel esta sendo controlada pelo useState muda seu valor, ele faz uma rendirizacao do componente que esta utilizando esta variavel 
 
 		criando um hook (Hook personalizado)
-			- é uma funcao criada em um arquivo reparado e que ira gerencia algum(s) estado(s)
+			- é uma funcao criada em um arquivo reparado e que irá gerenciar algum(s) estado(s)
 				ex: crio um arquivo na pasta hooks chamado useRequest.js
 				export const useRequest = () => {
 					const [loading,setLoading] = useState(false)
@@ -100,7 +100,11 @@ Curso JavaScript
 			
 			- onde vai usar o hook:
 				const {loading,getRequest} = useRequest ()
-					
+		
+		Renderizacao Condicional 
+			{x && <p> X é true </p>}
+			{name  === 'Joao' ? (<p>O nome do cliente é Joao</p>) : (<p>O nome nao e Joao</p>)}
+		
 
 	Lista 
 		const [list] = useState(["Matheus","Pedro","Adriano"])
@@ -109,9 +113,6 @@ Curso JavaScript
                 <li key={i}>{item}</li>
             ))}
         </ul>	
-
-	Condicional
-		- exemplos em ConditionalRender	
 
 	Props
 		Permite passar valores de componente pai para um componente filho
@@ -122,6 +123,15 @@ Curso JavaScript
 			<DivMenu titulo="teste">Carro Novo</DivMenu>
 		
 		no componente filho
+			const DivMenu = (props) => {
+				return {
+					<div>
+						<h1>{props.titulo}</h1>
+						<h2>{props.children}</h2>
+					</div>
+				}
+			}
+			// ou usando a desestruturacao 
 			const DivMenu = ({titulo, children}) => {
 				return {
 					<div>
@@ -131,19 +141,18 @@ Curso JavaScript
 				}
 			}
 
-
-	Fragments
-		<></>
-
-	Children prop (abracar conteudo)
-		utilizado para quando um componente precisa ter Jsx dentro de um componente
-		porem este JSX vem do componente pai 
-
-	Função props 
-		as funções do pai podem ser passados via props para o componente filho 
+		// podemos passar funcoes tbm via props
+			no componente pai:
+				function MyFunction(){ ... }
+				<MeuComponente func={MyFunction} />
+			no componente filho
+				const MeuComponente = ({MyFunction}) => {
+					<button onClick={MyFunction}>Executar funcao</button>
+				}	
 
 	Elevação de state (State lift)
 		quando um valor é elevado do componente filho para o pai 
+		no pai temos um state, e dois componentes filhos, um que vai consumir o valor do state e outro que vai modificar o valor do state 
 
 >> Seção 4
 	CSS global 
@@ -191,24 +200,47 @@ Curso JavaScript
 			"server":"json-server --watch data/db.json"
 		para executar:
 			npm run server 	
+
+	Fazendo requisicoes
+		//GET
+		const fetchData = async () => {
+		    let res = await fetch(url)
+		    res = await res.json()
+		    setProducts(res)
+	    }
+	    //POST
+		const fetchData = async () => {
+		    let resp = await fetch(url,{
+		    	method:"POST",
+		    	headers:{
+		    		"Content-Type": "application/json"
+		    	},
+		    	body:JSON.stringify(products),
+		    })
+		    resp = await resp.json()
+		    //atualizando o states com o array de produtos 
+		    setProducts( (prevProducts) => [...prevProducts,resp] )
+	    }
+
+		    
+				
 	useEffect
 		faz com que uma determinada açao seja executada apenas vez
 		isso é interessante pois os componentes estão sempre se renderizando
 		presente sempre nas requisições assincronas 
+		possui um array de dependencias, quando uma delas altera o useEffect é executado 
+			exemplo:
+				funcao executada uma unica vez em App.js, para buscar dados de produtos via requisicao, trazendo dados do back
+			useEffect( () => {
+				async function fetchData(){
+					const resp = await fetch(url)
+					const data = await resp.jon()
+					setProducts(data)
+				}
+				fetchData()
+			},[]) 
 
-	Custom hook para o fetch
-		dividir uma função para que ela possa ser reaproveitada
-		hooks ficam na pasta hooks
-		padrao useName 
-		criamos uma função e exportamos ela 
-
-	Estado de loading no Post
-		remover ação de adicionar outro item enquanto o request ainda nao finalizou
-	
-	React Router	
-		criar estruturas de rotas 
-		precisa instalar (BrowserRouter, Routes, Route) e configurar no projeto 
-			npm i react-router-dom
+		
 
 >> Seção 8: React Router 
 	precisa instalar
@@ -231,22 +263,177 @@ Curso JavaScript
 			<NavLink to="/">Home</NavLink>	
 	Mudar de rota no js 
 		import { useNavigate } from "react-router-dom"	
-		navigate("/home")			
+		const navigate = useNavigate();
+		navigate("/home")	
+
+	Passar parametro pera url
+		em App.js
+			<Route path="/products/:id" element={<Product />} />
+			<Route path="/products/:id/info" element={<Info />} />
+		
+		No componente que vai pasar o parametro
+			const Home = () => {
+			  const url = "http://localhost:3000/products"
+			  const {data: itens, error} = useFetch(url)
+			  return (
+			    <div>
+			      <h1> Home </h1>
+			      <h2>Produtos</h2>
+			      {error && <p>{error}</p>}
+			      <div className='products'>
+			        {itens?.map(i => (<p key={i.id}>Nome: {i.name}
+			        <Link to={`/products/${i.id}`}> Detalhes</Link>
+			          </p>))}
+
+			      </div>
+			    </div>
+			  )
+			}	
+
+		no componente filho:
+			const {id} = useParams()			
 
 >> Seção 9: Context API do React
 	facilita o compartilhamento de um estado (variaves) entre componentes
 	dados globais 
 	o context precisa abracar os componentes que receberao seus valores
 	geralmente colocamos no App.js ou index.js
-	ficam na pasta context 	
 	
+	criando context (CounterContext.js):
+		import { createContext,useState } from "react"
+		export const CounterContext = createContext()
+		//criar provider
+		 export const CounterContextProvider = ({children}) =>{
+		    const [counter,setCounter] = useState(1)
+		    return (
+		        <CounterContext.Provider value={{counter,setCounter}}>
+		            {children}
+		        </CounterContext.Provider>
+		    )
+		 }
 
+	no index.js poe exemplo
+		<CounterContextProvider>
+        	<App />
+    	</CounterContextProvider>
 
+    no componente que vai usar o state compartilhado
+    	import { CounterContext } from "../context/CounterContext"
+    	import { useContext } from "react"
+    	const Component = () => {
+    		const {counter} = useContext(CounterContext)
+    	}
 
 
 >> Seção 10: Mini blog
 	trabalhando/integrando projeto com Firebase Auth
 	
+>> Seção 11: Entenda os hooks do React
+	npm i react-router-dom
+
+	Focar em um elemento
+		import React, { useRef} from "react";
+		const inputRef = useRef();
+		inputRef.current.focus();
+
+		<input
+          type="text"
+          ref={inputRef}
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+
+	Debug
+		useDebugValue()	
+
+>> Secao 17
+	Instalar Typescript
+		npm install typescript -g 
+	
+	Ver a versao instalada 
+		tsc -v
+
+	compilar
+		tsc arquivo.tsc
+
+	criar um app 
+		npx create-react-app <nome> --template typescript	
+		ou utilizar o vite
+	
+	Variáveis	
+		const name:string = "Teste"
+				:number
+				:boolean
+	Funcoes
+		const funTeste = (n:string):string => {
+			return `Ola,${n}`
+		}	
+
+	VS code (extensao)
+		Typescript React code snippets
+		infeng
+
+		tsrafce
+	
+	Enum
+	
+		category: Category
+
+		export enum Category{
+			JS = "JavaScript",
+			TS = "TypeScript"
+		}
+	
+	Types
+		type textOrNull = string | null 
+		type fixed = "Isso" | "Ou" | "Aquilo" 
+
+	Context API	
+
+		No pai:
+		interface IAppContext{
+			language:string,
+			projects:number
+		}
+
+		const contextvalue:IAppContext = {
+			language:"javascript",
+			projects:5
+		}	
+
+		export const AppContext = createContext<IAppContext,null>(null)
+
+		no HTML
+		<AppContext.Provider value={contextvalue}> </AppContext.Provider>
+
+
+		No filho:
+			import useContext e AppContext
+
+			const details = useContext(AppContext)
+
+			{details && (
+				<h2>{details.language} </h2>
+				h2>{details.projects} </h2>
+			)}
+
+	const addTaskhandler = (e:FormEvent<HTMLElemnt>) => {
+		e.preventDefault()
+		... 
+		
+	}
+
+
+
+
+
+		
+
+		
+
+				
+
+
 
 			 
 						
